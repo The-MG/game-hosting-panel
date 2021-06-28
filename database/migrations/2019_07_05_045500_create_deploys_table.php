@@ -24,6 +24,7 @@ class CreateDeploysTable extends Migration
             $table->unsignedInteger('disk');
             $table->unsignedInteger('io');
             $table->unsignedInteger('databases');
+            $table->unsignedInteger('backups');
 
 			$table->uuid('transaction_id')->nullable();
 			$table->foreign('transaction_id')->references('id')->on('transactions');
